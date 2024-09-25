@@ -1,10 +1,10 @@
-document.getElementById("btn-donate-now").addEventListener("click", function(event){
+document.getElementById("btn-donate-now-3").addEventListener("click", function(event){
     event.preventDefault(); 
 
     // const addMoney = getInputFieldValueById();
 
 
-    const donateMoney = getInputValueById("input-number");
+    const donateMoney = getInputValueById("input-number-3");
     
     if(isNaN(donateMoney)){
         alert("Failed to donate money. please try again!")
@@ -16,26 +16,20 @@ if(donateMoney < 0){
 }
 
         
-        const amount = getTextById("amount");
+        const amount = getTextById("amount-3");
         const newAmount = donateMoney + amount;
-        document.getElementById("amount").innerText = newAmount +''+"BDT";
-         // modal 
-         const modalInputOne = document.getElementById('modal-1');
-         modalInputOne.showModal();
-         document.getElementById('input-number').value = "";
- 
-     document.getElementById('close-btn').addEventListener('click', function () {
-         const modal = document.getElementById('modal-1');
-         modal.close();
-     });
+        document.getElementById("amount-3").innerText = newAmount +''+ "BDT";
+        
+        alert("donation successful")
         const totalAmount = getTextById("total-amount");
         const newAm = totalAmount - donateMoney;
         document.getElementById("total-amount").innerText = newAm +''+"BDT";
-        // history stored 
+
+        // history stored
         const div =document.createElement("div");
         div.classList.add("font-bold");
         div.innerHTML=`
-        <P>${donateMoney} TK is donated for Donate for Flood at Noakhali, Bangladesh </P>
+        <P>${donateMoney} TK is donated for Aid for Injured in the Quota Movement </P>
         ${getFormattedDate()}
                 <p>------------------------------------------------------------------------------</P>
 
@@ -44,9 +38,13 @@ if(donateMoney < 0){
         `
        
         document.getElementById("show-history").appendChild(div);
+     
+    
+
         
-   
         
 
-    });
-           
+
+    
+   
+});
