@@ -19,20 +19,6 @@ function getSectionById(id){
 }
 
 
-function buttonColorById(id){
-    document.getElementById("donation").classList.remove("bg-green-500");
-    document.getElementById("history").classList.remove("bg-green-500");
-    if(id==="donation"){
-        document.getElementById("donation").classList.add("bg-green-500");
-
-}
-else if(id ==="history"){
-    document.getElementById("history").classList.add("bg-green-500");
-
-
-}
-}
-
 function getFormattedDate() {
     const runningDate = new Date();
     const date = runningDate.toString(); // This gives the full date string
